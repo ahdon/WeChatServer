@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" /> 
+    <constant name="struts.ui.theme" value="simple" />
+    
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant> 
+	<!-- 
+	<package name="tags" extends="struts-default">
+        <action name="tags" class="com.bjsxt.struts2.tags.TagsAction">
+            <result>WEB-INF/result.html</result>
+        </action>
+
+    </package>
+     -->
+    <package name="brand" extends="struts-default">
+        
+        <action name="signup" class="com.cbd.action.SignAction" method="SignUp">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="login" class="com.cbd.action.LoginAction" method="Login">
+            <result name="success">index.jsp</result>
+        </action>
+        
+      
+    </package>
+
+</struts>

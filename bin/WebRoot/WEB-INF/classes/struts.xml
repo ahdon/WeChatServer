@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+    
+    <constant name="struts.ui.theme" value="simple" />
+	<!-- 
+	<package name="tags" extends="struts-default">
+        <action name="tags" class="com.bjsxt.struts2.tags.TagsAction">
+            <result>WEB-INF/result.html</result>
+        </action>
+
+    </package>
+     -->
+    <package name="search" extends="struts-default">
+		<action name="search" class="com.cbd.action.SearchAction" method="getResult">
+            <result name="success">WEB-INF/result.jsp</result>
+        </action>
+    </package>
+
+</struts>
